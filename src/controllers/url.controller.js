@@ -2,7 +2,6 @@ import createHttpError from 'http-errors';
 import { nanoid } from 'nanoid';
 
 import { URL } from '../models/index.js';
-import { HOST } from '../configs/index.js';
 import { validateUrl } from '../utils/index.js';
 
 const getAllShortLinks = async (req, res, next) => {
@@ -35,7 +34,9 @@ const createShortLink = async (req, res, next) => {
 		let { url, slug } = req.body;
 		let destinationUrl = '';
 
+		const HOST = `${req.protocol}://${req.headers.host}`;
 		const userAgent = req.headers['user-agent'];
+
 		const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
 
 		if (!url) {
@@ -63,9 +64,9 @@ const createShortLink = async (req, res, next) => {
 			slug,
 			orignUrl: url,
 			shortUrl: {
-				ios: `${HOST}api/ios/${slug}`,
-				android: `${HOST}api/android/${slug}`,
-				web: `${HOST}api/web/${slug}`
+				ios: `${HOST}/api/ios/${slug}`,
+				android: `${HOST}/api/android/${slug}`,
+				web: `${HOST}/api/web/${slug}`
 			}
 		});
 		await newUrl.save();
