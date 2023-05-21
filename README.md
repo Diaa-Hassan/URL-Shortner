@@ -32,13 +32,22 @@ You can use the following url form postman docs to check all the endpoints.
 git clone https://github.com/Diaa-Hassan/URL-Shortner.git
 ```
 
-2. Install the required packages
+2. Create a `.env` file in the root directory of the project and add the following variables _check the `.env.example` file_
+
+```bash
+touch .env
+echo "PORT=5000" >> .env
+echo "MONGO_URI=<your-mongodb-uri>" >> .env
+echo "HOST=http://localhost:5000" >> .env
+```
+
+3. Install the required packages
 
 ```bash
 npm install
 ```
 
-3. Start the server
+4. Start the server
 
 ```bash
 npm start
