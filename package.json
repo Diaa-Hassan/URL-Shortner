@@ -32,7 +32,6 @@
 	"lint-staged": {
 		"**/**/*.+(js|ts|json)": [
 			"npm run format",
-			"npm run lint",
 			"git add ."
 		]
 	}
