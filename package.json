@@ -2,6 +2,7 @@
 	"name": "url-shortner",
 	"version": "1.0.0",
 	"description": "",
+	"type": "module",
 	"main": "src/index.js",
 	"scripts": {
 		"dev": "nodemon src/index.js",
@@ -27,6 +28,7 @@
 		"eslint-plugin-prettier": "^4.2.1",
 		"husky": "^8.0.0",
 		"lint-staged": "^13.2.2",
+		"nodemon": "^2.0.22",
 		"prettier": "^2.8.8"
 	},
 	"lint-staged": {
@@ -34,5 +36,16 @@
 			"npm run format",
 			"git add ."
 		]
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"express-rate-limit": "^6.7.0",
+		"express-requests-logger": "^4.0.0",
+		"http-errors": "^2.0.0",
+		"mongoose": "^7.2.0",
+		"morgan": "^1.10.0",
+		"nanoid": "^4.0.2"
 	}
 }
