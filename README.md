@@ -2,7 +2,7 @@
 
 A URL shortener decreases the length of a URL for you. Large URLs can be complicated to remember or share with others. A shortened URL version can help you share your favorite link more easily.
 
-This project has been deployed on [cyclic.sh](https://cyclic.sh/) and you can check it out [here](https://kind-blue-haddock-hat.cyclic.app/shortlinks).
+> This project has been deployed on [cyclic.sh](https://cyclic.sh/) and you can check it out [here](https://shorten-this-url.cyclic.app/shortlinks).
 
 ## Tech Stack
 
