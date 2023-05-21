@@ -1,0 +1,13 @@
+node_modules
+docs
+.gitignore
+.git
+.vscode
+.husky
+.prettierignore
+.prettierrc
+.eslintrc.js
+.dockerignore
+.env
+example.env
+README.md

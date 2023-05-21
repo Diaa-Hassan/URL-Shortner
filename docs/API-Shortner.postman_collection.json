@@ -1,0 +1,1519 @@
+{
+	"info": {
+		"_postman_id": "b6eccd65-7497-4b66-b3c7-738914bde708",
+		"name": "AppGain Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check Server Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/health",
+					"host": ["{{HOST}}"],
+					"port": "{{PORT}}",
+					"path": ["health"]
+				}
+			},
+			"response": [
+				{
+					"name": "Available Server",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/health",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["health"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "98"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "375"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-v/Y1JusChTxrQUzPtNAKycooOTA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:09:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "404 NotFound",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/random/route",
+					"host": ["{{HOST}}"],
+					"port": "{{PORT}}",
+					"path": ["random", "route"]
+				}
+			},
+			"response": [
+				{
+					"name": "404 handling",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/random/route",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["random", "route"]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "93"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "580"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-pBwBiuB59e+iDOFqO4mQ93BGd7w\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:38:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 404,\n    \"message\": \"Route not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Short Links",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/shortlinks",
+					"host": ["{{HOST}}"],
+					"port": "{{PORT}}",
+					"path": ["shortlinks"]
+				}
+			},
+			"response": [
+				{
+					"name": "Success with return data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "97"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "339"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1845"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"735-F1gDPYNGHrKHy8sueg8JNghx7/E\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:10:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shortLinks\": [\n        {\n            \"shortUrl\": {\n                \"ios\": \"http://localhost:7000//api/ios/qqaa4\",\n                \"android\": \"http://localhost:7000//api/android/qqaa4\",\n                \"web\": \"http://localhost:7000//api/web/qqaa4\"\n            },\n            \"slug\": \"qqaa4\",\n            \"orignUrl\": \"https://flaviocopes.com/access/\"\n        },\n        {\n            \"shortUrl\": {\n                \"ios\": \"http://localhost:7000/api/ios/qqaa4sss\",\n                \"android\": \"http://localhost:7000/api/android/qqaa4sss\",\n                \"web\": \"http://localhost:7000/api/web/qqaa4sss\"\n            },\n            \"slug\": \"qqaa4sss\",\n            \"orignUrl\": \"https://flaviocopes.com/access/\"\n        },\n        {\n            \"shortUrl\": {\n                \"ios\": \"http://localhost:7000/api/ios/4fsJeG2\",\n                \"android\": \"http://localhost:7000/api/android/4fsJeG2\",\n                \"web\": \"http://localhost:7000/api/web/4fsJeG2\"\n            },\n            \"slug\": \"4fsJeG2\",\n            \"orignUrl\": \"https://flaviocopes.com/access/\"\n        },\n        {\n            \"shortUrl\": {\n                \"ios\": \"http://localhost:7000/api/ios/22i7XEC\",\n                \"android\": \"http://localhost:7000/api/android/22i7XEC\",\n                \"web\": \"http://localhost:7000/api/web/22i7XEC\"\n            },\n            \"slug\": \"22i7XEC\",\n            \"orignUrl\": \"https://flaviocopes.com/access/\"\n        },\n        {\n            \"shortUrl\": {\n                \"ios\": \"http://localhost:7000/api/ios/9J1QHti\",\n                \"android\": \"http://localhost:7000/api/android/9J1QHti\",\n                \"web\": \"http://localhost:7000/api/web/9J1QHti\"\n            },\n            \"slug\": \"9J1QHti\",\n            \"orignUrl\": \"https://flaviocopes.com/access/\"\n        },\n        {\n            \"shortUrl\": {\n                \"ios\": \"http://localhost:7000/api/ios/BxduWaw\",\n                \"android\": \"http://localhost:7000/api/android/BxduWaw\",\n                \"web\": \"http://localhost:7000/api/web/BxduWaw\"\n            },\n            \"slug\": \"BxduWaw\",\n            \"orignUrl\": \"https://flaviocopes.com/access/\"\n        },\n        {\n            \"shortUrl\": {\n                \"ios\": \"http://localhost:7000/api/ios/fJYhW-F\",\n                \"android\": \"http://localhost:7000/api/android/fJYhW-F\",\n                \"web\": \"http://localhost:7000/api/web/fJYhW-F\"\n            },\n            \"slug\": \"fJYhW-F\",\n            \"orignUrl\": \"https://flavkjdskdkskfocopes.com/access/\"\n        },\n        {\n            \"shortUrl\": {\n                \"ios\": \"http://localhost:7000/api/ios/1tCasiC\",\n                \"android\": \"http://localhost:7000/api/android/1tCasiC\",\n                \"web\": \"http://localhost:7000/api/web/1tCasiC\"\n            },\n            \"slug\": \"1tCasiC\",\n            \"orignUrl\": \"https://www.section.io/engineering-education/nodejs-url-shortener/..\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Success with no data available",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "95"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "52"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-u5Gr2xuVC/pExQCYpzRFa0ng5uw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:15:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"No short links found! Try creating some.\""
+				}
+			]
+		},
+		{
+			"name": "Create a Short Link",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\" : \"https://flaviocopes.com/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/shortlinks/",
+					"host": ["{{HOST}}"],
+					"port": "{{PORT}}",
+					"path": ["shortlinks", ""]
+				}
+			},
+			"response": [
+				{
+					"name": "Success, Created Without Providing The Slug in The Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Android",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\" : \"https://flaviocopes.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", ""]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "92"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "309"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4f-X2OAfoxZf0bWD/S4CZzYQatDgyM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:28:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"slug\": \"EfI-DwA\",\n    \"destinationUrl\": \"http://localhost:5000/api/android/EfI-DwA\"\n}"
+				},
+				{
+					"name": "Success, returning short link for *web* user agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"slug\" : \"ABCD123\",\n    \"url\" : \"https://flaviocopes.com/access/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", ""]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "894"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "75"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b-rmrtKtusEu5/7OcrGorxdu6UxyA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:18:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"slug\": \"ABCD123\",\n    \"destinationUrl\": \"http://localhost:5000/api/web/ABCD123\"\n}"
+				},
+				{
+					"name": "Success, returning short link for *web* user agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "iPhone",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"slug\" : \"xyz959\",\n    \"url\" : \"https://flaviocopes.com/access/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", ""]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "98"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "712"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-IqVv8s7VEZ1crOeoL6gVo3FY1Mg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:21:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"slug\": \"xyz959\",\n    \"destinationUrl\": \"http://localhost:5000/api/ios/xyz959\"\n}"
+				},
+				{
+					"name": "Success, returning short link for *web* user agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Android",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"slug\" : \"xyz959VVV\",\n    \"url\" : \"https://flaviocopes.com/access/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", ""]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "96"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "571"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"53-mQWG/OfgDxUF9FxyF0iKzBpl2bE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:23:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"slug\": \"xyz959VVV\",\n    \"destinationUrl\": \"http://localhost:5000/api/android/xyz959VVV\"\n}"
+				},
+				{
+					"name": "Error, when using previously used slug",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Android",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"slug\" : \"xyz959\",\n    \"url\" : \"https://flaviocopes.com/access/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", ""]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "97"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "622"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-4Aqy5DjshXq/Z7YINeqsS6OOEkI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:23:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 409,\n    \"message\": \"Slug in use\"\n}"
+				},
+				{
+					"name": "Error, Not Providing The URL",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Android",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"slug\" : \"x9VV\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", ""]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "95"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "494"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-rz5FMHXPSYGh6VY6YAg03KZiTps\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:25:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 400,\n    \"message\": \"Provide url\"\n}"
+				},
+				{
+					"name": "Error, Providing invalid Link",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Android",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"slug\" : \"xcaaaVV\",\n    \"url\" : \"ht://flaviocopes.com/access/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", ""]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "93"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "371"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41-nKyy62jvF1ZDQfmaz/aZMiEHv4Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:27:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 400,\n    \"message\": \"Provide valid url\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get A Short Link by Slug Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/shortlinks/ABCD123",
+					"host": ["{{HOST}}"],
+					"port": "{{PORT}}",
+					"path": ["shortlinks", "ABCD123"]
+				}
+			},
+			"response": [
+				{
+					"name": "Success, Returning avilable data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/ABCD123",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", "ABCD123"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "90"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "178"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "236"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ec-8dMVfX999xt3ah2/ryX2jhZB/XM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:30:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shortLink\": {\n        \"shortUrl\": {\n            \"ios\": \"http://localhost:5000/api/ios/ABCD123\",\n            \"android\": \"http://localhost:5000/api/android/ABCD123\",\n            \"web\": \"http://localhost:5000/api/web/ABCD123\"\n        },\n        \"slug\": \"ABCD123\",\n        \"orignUrl\": \"https://flaviocopes.com/access/\"\n    }\n}"
+				},
+				{
+					"name": "Error, Providing wrong Slug",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/AAA111",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", "AAA111"]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "89"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "83"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-awfAYB3OsmK+1XtQxJVHylQlToU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:32:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 404,\n    \"message\": \"Short link not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Original Link of The Slug",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\" : \"https://www.google.com/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/shortlinks/ABCD123",
+					"host": ["{{HOST}}"],
+					"port": "{{PORT}}",
+					"path": ["shortlinks", "ABCD123"]
+				}
+			},
+			"response": [
+				{
+					"name": "Success, Origin Link Updated",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\" : \"https://www.google.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/ABCD123",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", "ABCD123"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "94"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "660"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e4-kYKfI0MdrGcG6PCaOhto5PTzojk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:37:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shortLink\": {\n        \"shortUrl\": {\n            \"ios\": \"http://localhost:5000/api/ios/ABCD123\",\n            \"android\": \"http://localhost:5000/api/android/ABCD123\",\n            \"web\": \"http://localhost:5000/api/web/ABCD123\"\n        },\n        \"slug\": \"ABCD123\",\n        \"orignUrl\": \"https://www.google.com/\"\n    }\n}"
+				},
+				{
+					"name": "Error, Not providing the link",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/ABCD123",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", "ABCD123"]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "98"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "809"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-rz5FMHXPSYGh6VY6YAg03KZiTps\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:34:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 400,\n    \"message\": \"Provide url\"\n}"
+				},
+				{
+					"name": "Error, Using Wrong Slug",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\" : \"https://www.google.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/ABCD1234",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", "ABCD1234"]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "96"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "754"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-awfAYB3OsmK+1XtQxJVHylQlToU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:35:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 404,\n    \"message\": \"Short link not found\"\n}"
+				},
+				{
+					"name": "Error, Providing invalid url",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\" : \"h://www.google.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/shortlinks/ABCD123",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["shortlinks", "ABCD123"]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "95"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "716"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41-nKyy62jvF1ZDQfmaz/aZMiEHv4Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:36:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 400,\n    \"message\": \"Provide valid url\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Handle Redirections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/api/:platform/:slug",
+					"host": ["{{HOST}}"],
+					"port": "{{PORT}}",
+					"path": ["api", ":platform", ":slug"],
+					"variable": [
+						{
+							"key": "platform",
+							"value": "ios"
+						},
+						{
+							"key": "slug",
+							"value": "ABCD123"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Correct Slug",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/api/:platform/:slug",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["api", ":platform", ":slug"],
+							"variable": [
+								{
+									"key": "platform",
+									"value": "ios"
+								},
+								{
+									"key": "slug",
+									"value": "ABCD123"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 21:40:58 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=ISO-8859-1"
+						},
+						{
+							"key": "Content-Security-Policy-Report-Only",
+							"value": "object-src 'none';base-uri 'self';script-src 'nonce-wDQfD-1N6g_cecKEf7Q1EQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"
+						},
+						{
+							"key": "P3P",
+							"value": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Server",
+							"value": "gws"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AEC=AUEFqZcVi29YOoaLV2jDYVT4iP3ilzj5zD4OEovqM4e-Vjxyy3yn0DYbMg; expires=Fri, 17-Nov-2023 21:40:58 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "NID=511=QqjgxgR5lziYERThYmqwPg7Uw2_Pg-3yy0VpFdG-4ujyWlyKyzTbT4br69xaiYffyw6SrmzARY5P_xWY7HxvSVBdr5z6OWyQJA-lgOD-eGUUOP-SAy02qbOgYWG4W3esda1ZiEMfE9htXW3ROWjvbPVv2Iwp-7XNRdIvVsI46Mc; expires=Mon, 20-Nov-2023 21:40:58 GMT; path=/; domain=.google.com; HttpOnly"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "<!doctype html><html dir=\"rtl\" itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"ar\"><head><meta content=\"text/html; charset=UTF-8\" http-equiv=\"Content-Type\"><meta content=\"/images/branding/googleg/1x/googleg_standard_color_128dp.png\" itemprop=\"image\"><title>Google</title><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){window.google={kEI:'6o9qZLCtDe-A9u8PtcqnmAo',kEXPI:'0,1359409,6059,206,4804,2316,383,246,5,1129120,1197776,625,121,379968,16115,28684,22431,1361,12315,17584,4998,13228,3847,36218,5098,2891,8348,4012,29842,47183,20583,4,1528,2304,42127,11442,2216,4437,16786,5815,2542,4094,7596,1,42157,2,14019,1649,24090,5679,1020,31123,4568,6258,23418,1252,5835,14968,4332,7484,445,2,2,1,26632,8155,7381,15969,873,19634,7,1922,9779,12414,23740,6305,2007,1135,17057,20136,14,82,12151,8055,8377,5911,18452,3030,5630,480,5041,4665,1804,10472,2884,2497,17244,2171,961,4291,2993,542,3013,14,476,991,87,80,2172,309,5468,4467,1443,1128,5905,1438,671,616,1109,483,1491,3356,3214,552,129,67,912,2881,681,1,1072,12,1394,707,2567,674,266,1000,131,537,8,3,13,289,219,3,3,9,859,3238,643,327,28,8,214,51,134,199,87,2,571,447,601,372,1197,12,2,10,535,20,5202600,6280,557,7,38,85,2,8793565,4589,3311,141,795,19735,1,347,5081,60,553,43,120,9,100,26,5,8,24,3,56,9,149,23,23944216,578,4041564,18637,2893,6250,14715,285,740,5550,4,314,747,1408441,253927,23505341,685,83,228,816,1281,505,2,257,293,766,105,150,2,345,672,640,5,195,451,4,347,599,1970,67,177,223,4,321,171,222,399,606,210,108,467,427,1851,93,717,627,232,123,360,125,145,205,120,4,244,843,9,331,432,6,130,120,375,5,1101,1225,154,1230,489,269,42,302,36,201,1145,108,22,36,200,32,216,2,540,4,922,228,1573',kBL:'VVNZ',kOPI:89978449};google.sn='webhp';google.kHL='ar';})();(function(){\nvar h=this||self;function l(){return void 0!==window.google&&void 0!==window.google.kOPI&&0!==window.google.kOPI?window.google.kOPI:null};var m,n=[];function p(a){for(var b;a&&(!a.getAttribute||!(b=a.getAttribute(\"eid\")));)a=a.parentNode;return b||m}function q(a){for(var b=null;a&&(!a.getAttribute||!(b=a.getAttribute(\"leid\")));)a=a.parentNode;return b}function r(a){/^http:/i.test(a)&&\"https:\"===window.location.protocol&&(google.ml&&google.ml(Error(\"a\"),!1,{src:a,glmm:1}),a=\"\");return a}\nfunction t(a,b,c,d,k){var e=\"\";-1===b.search(\"&ei=\")&&(e=\"&ei=\"+p(d),-1===b.search(\"&lei=\")&&(d=q(d))&&(e+=\"&lei=\"+d));d=\"\";var g=-1===b.search(\"&cshid=\")&&\"slh\"!==a,f=[];f.push([\"zx\",Date.now().toString()]);h._cshid&&g&&f.push([\"cshid\",h._cshid]);c=c();null!=c&&f.push([\"opi\",c.toString()]);for(c=0;c<f.length;c++){if(0===c||0<c)d+=\"&\";d+=f[c][0]+\"=\"+f[c][1]}return\"/\"+(k||\"gen_204\")+\"?atyp=i&ct=\"+String(a)+\"&cad=\"+(b+e+d)};m=google.kEI;google.getEI=p;google.getLEI=q;google.ml=function(){return null};google.log=function(a,b,c,d,k,e){e=void 0===e?l:e;c||(c=t(a,b,e,d,k));if(c=r(c)){a=new Image;var g=n.length;n[g]=a;a.onerror=a.onload=a.onabort=function(){delete n[g]};a.src=c}};google.logUrl=function(a,b){b=void 0===b?l:b;return t(\"\",a,b)};}).call(this);(function(){google.y={};google.sy=[];google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.sx=function(a){google.sy.push(a)};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};google.bx=!1;google.lx=function(){};}).call(this);google.f={};(function(){\ndocument.documentElement.addEventListener(\"submit\",function(b){var a;if(a=b.target){var c=a.getAttribute(\"data-submitfalse\");a=\"1\"===c||\"q\"===c&&!a.elements.q.value?!0:!1}else a=!1;a&&(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener(\"click\",function(b){var a;a:{for(a=b.target;a&&a!==document.documentElement;a=a.parentElement)if(\"A\"===a.tagName){a=\"1\"===a.getAttribute(\"data-nohref\");break a}a=!1}a&&b.preventDefault()},!0);}).call(this);</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:left}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-left:.5em;vertical-align:top}#gbar{float:right}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}\n</style><style>body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#1558d6}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-right:4px}input{font-family:inherit}body{background:#fff;color:#000}a{color:#4b11a8;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#1558d6}a:visited{color:#4b11a8}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-right:13px;font-size:11px}.lsbb{background:#f8f9fa;border:solid 1px;border-color:#dadce0 #dadce0 #70757a #70757a;height:30px}.lsbb{display:block}#WqQANb a{display:inline-block;margin:0 12px}.lsb{background:url(/images/nav_logo229.png) 0 -261px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#dadce0}.lst:focus{outline:none}.Ucigb{width:458px}</style><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){window.google.erd={jsr:1,bv:1797,de:true};\nvar h=this||self;var k,l=null!=(k=h.mei)?k:1,n,p=null!=(n=h.sdo)?n:!0,q=0,r,t=google.erd,v=t.jsr;google.ml=function(a,b,d,m,e){e=void 0===e?2:e;b&&(r=a&&a.message);if(google.dl)return google.dl(a,e,d),null;if(0>v){window.console&&console.error(a,d);if(-2===v)throw a;b=!1}else b=!a||!a.message||\"Error loading script\"===a.message||q>=l&&!m?!1:!0;if(!b)return null;q++;d=d||{};b=encodeURIComponent;var c=\"/gen_204?atyp=i&ei=\"+b(google.kEI);google.kEXPI&&(c+=\"&jexpid=\"+b(google.kEXPI));c+=\"&srcpg=\"+b(google.sn)+\"&jsr=\"+b(t.jsr)+\"&bver=\"+b(t.bv);var f=a.lineNumber;void 0!==f&&(c+=\"&line=\"+f);var g=\na.fileName;g&&(0<g.indexOf(\"-extension:/\")&&(e=3),c+=\"&script=\"+b(g),f&&g===window.location.href&&(f=document.documentElement.outerHTML.split(\"\\n\")[f],c+=\"&cad=\"+b(f?f.substring(0,300):\"No script found.\")));c+=\"&jsel=\"+e;for(var u in d)c+=\"&\",c+=b(u),c+=\"=\",c+=b(d[u]);c=c+\"&emsg=\"+b(a.name+\": \"+a.message);c=c+\"&jsst=\"+b(a.stack||\"N/A\");12288<=c.length&&(c=c.substr(0,12288));a=c;m||google.log(0,\"\",a);return a};window.onerror=function(a,b,d,m,e){r!==a&&(a=e instanceof Error?e:Error(a),void 0===d||\"lineNumber\"in a||(a.lineNumber=d),void 0===b||\"fileName\"in a||(a.fileName=b),google.ml(a,!1,void 0,!1,\"SyntaxError\"===a.name||\"SyntaxError\"===a.message.substring(0,11)||-1!==a.message.indexOf(\"Script error\")?3:0));r=null;p&&q>=l&&(window.onerror=null)};})();</script></head><body bgcolor=\"#fff\"><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){var src='/images/nav_logo229.png';var iesg=false;document.body.onload = function(){window.n && window.n();if (document.images){new Image().src=src;}\nif (!iesg){document.f&&document.f.q.focus();document.gbqf&&document.gbqf.q.focus();}\n}\n})();</script><div id=\"mngb\"><div id=gbar><nobr><b class=gb1>&#1576;&#1581;&#1579;</b><a class=gb1 href=\"https://www.google.com.eg/imghp?hl=ar&tab=wi\">&#1589;&#1608;&#1585;</a><a class=gb1 href=\"https://maps.google.com.eg/maps?hl=ar&tab=wl\">&#1582;&#1585;&#1575;&#1574;&#1591; Google</a><a class=gb1 href=\"https://play.google.com/?hl=ar&tab=w8\">Play</a><a class=gb1 href=\"https://www.youtube.com/?tab=w1\">YouTube</a><a class=gb1 href=\"https://news.google.com/?tab=wn\">&#1575;&#1604;&#1571;&#1582;&#1576;&#1575;&#1585;</a><a class=gb1 href=\"https://mail.google.com/mail/?tab=wm\">Gmail</a><a class=gb1 href=\"https://drive.google.com/?tab=wo\">Drive</a><a class=gb1 style=\"text-decoration:none\" href=\"https://www.google.com.eg/intl/ar/about/products?tab=wh\"><u>&#1575;&#1604;&#1605;&#1586;&#1610;&#1583;</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a href=\"http://www.google.com.eg/history/optout?hl=ar\" class=gb4>&#1587;&#1616;&#1580;&#1604; &#1576;&#1581;&#1579; &#1575;&#1604;&#1608;&#1610;&#1576;</a> |<a  href=\"/preferences?hl=ar\" class=gb4>&#1575;&#1604;&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578;</a> |<a target=_top id=gb_70 href=\"https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://www.google.com/&ec=GAZAAQ\" class=gb4>&#1578;&#1587;&#1580;&#1610;&#1604; &#1575;&#1604;&#1583;&#1582;&#1608;&#1604;</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div></div><center><br clear=\"all\" id=\"lgpd\"><div id=\"lga\"><img alt=\"Google\" height=\"92\" src=\"/images/branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png\" style=\"padding:28px 0 14px\" width=\"272\" id=\"hplogo\"><br><br></div><form action=\"/search\" name=\"f\"><table cellpadding=\"0\" cellspacing=\"0\"><tr valign=\"top\"><td width=\"25%\">&nbsp;</td><td align=\"center\" nowrap=\"\"><input name=\"ie\" value=\"ISO-8859-1\" type=\"hidden\"><input value=\"ar\" name=\"hl\" type=\"hidden\"><input name=\"source\" type=\"hidden\" value=\"hp\"><input name=\"biw\" type=\"hidden\"><input name=\"bih\" type=\"hidden\"><div class=\"ds\" style=\"height:32px;margin:4px 0\"><div style=\"position:relative;zoom:1\"><input class=\"lst Ucigb\" style=\"margin:0;padding:5px 6px 0 8px;vertical-align:top;color:#000;padding-left:38px\" autocomplete=\"off\" value=\"\" title=\"&#1576;&#1581;&#1579; Google\" maxlength=\"2048\" name=\"q\" size=\"57\"><img src=\"/textinputassistant/tia.png\" style=\"position:absolute;cursor:pointer;left:5px;top:4px;z-index:300\" data-script-url=\"/textinputassistant/11/ar_tia.js\" id=\"tsuid_1\" alt=\"\" height=\"23\" width=\"27\"><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){var id='tsuid_1';document.getElementById(id).onclick = function(){var s = document.createElement('script');s.src = this.getAttribute('data-script-url');(document.getElementById('xjsc')||document.body).appendChild(s);};})();</script></div></div><br style=\"line-height:0\"><span class=\"ds\"><span class=\"lsbb\"><input class=\"lsb\" value=\"&#1576;&#1581;&#1579; Google\" name=\"btnG\" type=\"submit\"></span></span><span class=\"ds\"><span class=\"lsbb\"><input class=\"lsb\" id=\"tsuid_2\" value=\"&#1590;&#1585;&#1576;&#1577; &#1581;&#1592;\" name=\"btnI\" type=\"submit\"><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){var id='tsuid_2';document.getElementById(id).onclick = function(){if (this.form.q.value){this.checked = 1;if (this.form.iflsig)this.form.iflsig.disabled = false;}\nelse top.location='/doodles/';};})();</script><input value=\"AOEireoAAAAAZGqd-iVGl9xoCCrF0fFSuPVrHwoGIML_\" name=\"iflsig\" type=\"hidden\"></span></span></td><td class=\"fl sblc\" align=\"right\" nowrap=\"\" width=\"25%\"><a href=\"/advanced_search?hl=ar&amp;authuser=0\">&#1576;&#1581;&#1579; &#1605;&#1578;&#1602;&#1583;&#1605;</a></td></tr></table><input id=\"gbv\" name=\"gbv\" type=\"hidden\" value=\"1\"><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){var a,b=\"1\";if(document&&document.getElementById)if(\"undefined\"!=typeof XMLHttpRequest)b=\"2\";else if(\"undefined\"!=typeof ActiveXObject){var c,d,e=[\"MSXML2.XMLHTTP.6.0\",\"MSXML2.XMLHTTP.3.0\",\"MSXML2.XMLHTTP\",\"Microsoft.XMLHTTP\"];for(c=0;d=e[c++];)try{new ActiveXObject(d),b=\"2\"}catch(h){}}a=b;if(\"2\"==a&&-1==location.search.indexOf(\"&gbv=2\")){var f=google.gbvu,g=document.getElementById(\"gbv\");g&&(g.value=a);f&&window.setTimeout(function(){location.href=f},0)};}).call(this);</script></form><div id=\"gac_scont\"></div><div style=\"font-size:83%;min-height:3.5em\"><br><div id=\"gws-output-pages-elements-homepage_additional_languages__als\"><style>#gws-output-pages-elements-homepage_additional_languages__als{font-size:small;margin-bottom:24px}#SIvCob{color:#3c4043;display:inline-block;line-height:28px;}#SIvCob a{padding:0 3px;}.H6sW5{display:inline-block;margin:0 2px;white-space:nowrap}.z4hgWe{display:inline-block;margin:0 2px}</style><div id=\"SIvCob\">&#1605;&#1581;&#1585;&#1617;&#1603; &#1576;&#1581;&#1579; Google &#1605;&#1578;&#1608;&#1601;&#1617;&#1585; &#1576;&#1575;&#1604;&#1604;&#1594;&#1577;:  <a dir=\"ltr\" href=\"https://www.google.com/setprefs?sig=0_-aWqNz8JPFXIn4J1PMRBmhBb5Nk%3D&amp;hl=en&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiwyt6TsIf_AhVvgP0HHTXlCaMQ2ZgBCAU\">English</a></div></div></div><span id=\"footer\"><div style=\"font-size:10pt\"><div style=\"margin:19px auto;text-align:center\" id=\"WqQANb\"><a href=\"/intl/ar/ads/\">&#1575;&#1604;&#1573;&#1593;&#1604;&#1575;&#1606;&#1575;&#1578;</a><a href=\"http://www.google.com/intl/ar/services/\">&#1581;&#1604;&#1608;&#1604; &#1575;&#1604;&#1588;&#1585;&#1603;&#1575;&#1578;</a><a href=\"/intl/ar/about.html\">&#1603;&#1604; &#1605;&#1575; &#1578;&#1581;&#1576; &#1605;&#1593;&#1585;&#1601;&#1578;&#1607; &#1593;&#1606; Google &#1607;&#1606;&#1575;</a><a dir=\"ltr\" href=\"https://www.google.com/setprefdomain?prefdom=EG&amp;prev=https://www.google.com.eg/&amp;sig=K_N2Jztd5Ly4l2IMyAcyF8_kXci6o%3D\">Google.com.eg</a></div></div><p style=\"font-size:8pt;color:#70757a\">&copy; 2023 - <a href=\"/intl/ar/policies/privacy/\">&#1575;&#1604;&#1582;&#1589;&#1608;&#1589;&#1610;&#1577;</a> -<a href=\"/intl/ar/policies/terms/\">&#1575;&#1604;&#1576;&#1606;&#1608;&#1583;</a></p></span></center><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){window.google.cdo={height:757,width:1440};(function(){var a=window.innerWidth,b=window.innerHeight;if(!a||!b){var c=window.document,d=\"CSS1Compat\"==c.compatMode?c.documentElement:c.body;a=d.clientWidth;b=d.clientHeight}\nif(a&&b&&(a!=google.cdo.width||b!=google.cdo.height)){var e=google,f=e.log,g=\"/client_204?&atyp=i&biw=\"+a+\"&bih=\"+b+\"&ei=\"+google.kEI,h=\"\",k=[],l=void 0!==window.google&&void 0!==window.google.kOPI&&0!==window.google.kOPI?window.google.kOPI:null;null!=l&&k.push([\"opi\",l.toString()]);for(var m=0;m<k.length;m++){if(0===m||0<m)h+=\"&\";h+=k[m][0]+\"=\"+k[m][1]}f.call(e,\"\",\"\",g+h)};}).call(this);})();</script><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){google.xjs={ck:'xjs.hp.vUsZk7fd8do.R.X.O',cs:'ACT90oFGpj9phA1g7Utn168my7XKsBiPFw',csss:'ACT90oEVQDXPFSrAAyVcNYCgHhEkBUVBmA',excm:[],sepcss:false};})();</script><script nonce=\"wDQfD-1N6g_cecKEf7Q1EQ\">(function(){var u='/xjs/_/js/k\\x3dxjs.hp.en.JBBkcL2A0I4.O/am\\x3dAAAA6AQAUABgAQ/d\\x3d1/ed\\x3d1/rs\\x3dACT90oHfL3paQi4w2lrD3qQ26z9v60-mIQ/m\\x3dsb_he,d,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl';var amd=0;\nvar e=this||self,f=function(c){return c};var g;var k=function(c){this.g=c};k.prototype.toString=function(){return this.g+\"\"};var m={};\nfunction q(){var c=u,n=function(){};google.lx=google.stvsc?n:function(){google.timers&&google.timers.load&&google.tick&&google.tick(\"load\",\"xjsls\");var a=document;var b=\"SCRIPT\";\"application/xhtml+xml\"===a.contentType&&(b=b.toLowerCase());b=a.createElement(b);a=null===c?\"null\":void 0===c?\"undefined\":c;if(void 0===g){var d=null;var l=e.trustedTypes;if(l&&l.createPolicy){try{d=l.createPolicy(\"goog#html\",{createHTML:f,createScript:f,createScriptURL:f})}catch(r){e.console&&e.console.error(r.message)}g=\nd}else g=d}a=(d=g)?d.createScriptURL(a):a;a=new k(a,m);b.src=a instanceof k&&a.constructor===k?a.g:\"type_error:TrustedResourceUrl\";var h,p;(h=(a=null==(p=(h=(b.ownerDocument&&b.ownerDocument.defaultView||window).document).querySelector)?void 0:p.call(h,\"script[nonce]\"))?a.nonce||a.getAttribute(\"nonce\")||\"\":\"\")&&b.setAttribute(\"nonce\",h);document.body.appendChild(b);google.psa=!0;google.lx=n};google.bx||google.lx()};google.xjsu=u;e._F_jsUrl=u;setTimeout(function(){0<amd?google.caft(function(){return q()},amd):q()},0);})();window._ = window._ || {};window._DumpException = _._DumpException = function(e){throw e;};window._s = window._s || {};_s._DumpException = _._DumpException;window._qs = window._qs || {};_qs._DumpException = _._DumpException;function _F_installCss(c){}\n(function(){google.jl={blt:'none',chnk:0,dw:false,dwu:true,emtn:0,end:0,ico:false,ikb:0,ine:false,injs:'none',injt:0,injth:0,injv2:false,lls:'default',pdt:0,rep:0,snet:true,strt:0,ubm:false,uwp:true};})();(function(){var pmc='{\\x22d\\x22:{},\\x22sb_he\\x22:{\\x22agen\\x22:true,\\x22cgen\\x22:true,\\x22client\\x22:\\x22heirloom-hp\\x22,\\x22dh\\x22:true,\\x22ds\\x22:\\x22\\x22,\\x22fl\\x22:true,\\x22host\\x22:\\x22google.com\\x22,\\x22jsonp\\x22:true,\\x22msgs\\x22:{\\x22cibl\\x22:\\x22\\\\u0645\\\\u062d\\\\u0648 \\\\u0627\\\\u0644\\\\u0628\\\\u062d\\\\u062b\\x22,\\x22dym\\x22:\\x22\\\\u0647\\\\u0644 \\\\u062a\\\\u0642\\\\u0635\\\\u062f :\\x22,\\x22lcky\\x22:\\x22\\\\u0636\\\\u0631\\\\u0628\\\\u0629 \\\\u062d\\\\u0638\\x22,\\x22lml\\x22:\\x22\\\\u0645\\\\u0632\\\\u064a\\\\u062f \\\\u0645\\\\u0646 \\\\u0627\\\\u0644\\\\u0645\\\\u0639\\\\u0644\\\\u0648\\\\u0645\\\\u0627\\\\u062a\\x22,\\x22psrc\\x22:\\x22\\\\u062a\\\\u0645\\\\u062a \\\\u0625\\\\u0632\\\\u0627\\\\u0644\\\\u0629 \\\\u0647\\\\u0630\\\\u0627 \\\\u0627\\\\u0644\\\\u0628\\\\u062d\\\\u062b \\\\u0645\\\\u0646 \\\\u003Ca href\\x3d\\\\\\x22/history\\\\\\x22\\\\u003E\\\\u0633\\\\u0650\\\\u062c\\\\u0644 \\\\u0627\\\\u0644\\\\u0628\\\\u062d\\\\u062b\\\\u003C/a\\\\u003E.\\x22,\\x22psrl\\x22:\\x22\\\\u0625\\\\u0632\\\\u0627\\\\u0644\\\\u0629\\x22,\\x22sbit\\x22:\\x22\\\\u0627\\\\u0644\\\\u0628\\\\u062d\\\\u062b \\\\u0628\\\\u062d\\\\u0633\\\\u0628 \\\\u0627\\\\u0644\\\\u0635\\\\u0648\\\\u0631\\x22,\\x22srch\\x22:\\x22\\\\u0628\\\\u062d\\\\u062b Google\\\\u200f\\x22},\\x22ovr\\x22:{},\\x22pq\\x22:\\x22\\x22,\\x22rfs\\x22:[],\\x22sbas\\x22:\\x220 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08)\\x22,\\x22stok\\x22:\\x22pPtA2c2DfgmiQRXpipyKZV6kbT4\\x22}}';google.pmc=JSON.parse(pmc);})();(function(){\nvar b=function(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}},e=this||self;var g,h;a:{for(var k=[\"CLOSURE_FLAGS\"],l=e,n=0;n<k.length;n++)if(l=l[k[n]],null==l){h=null;break a}h=l}var p=h&&h[610401301];g=null!=p?p:!1;var q,r=e.navigator;q=r?r.userAgentData||null:null;function t(a){return g?q?q.brands.some(function(c){return(c=c.brand)&&-1!=c.indexOf(a)}):!1:!1}function u(a){var c;a:{if(c=e.navigator)if(c=c.userAgent)break a;c=\"\"}return-1!=c.indexOf(a)};function v(){return g?!!q&&0<q.brands.length:!1}function w(){return u(\"Safari\")&&!(x()||(v()?0:u(\"Coast\"))||(v()?0:u(\"Opera\"))||(v()?0:u(\"Edge\"))||(v()?t(\"Microsoft Edge\"):u(\"Edg/\"))||(v()?t(\"Opera\"):u(\"OPR\"))||u(\"Firefox\")||u(\"FxiOS\")||u(\"Silk\")||u(\"Android\"))}function x(){return v()?t(\"Chromium\"):(u(\"Chrome\")||u(\"CriOS\"))&&!(v()?0:u(\"Edge\"))||u(\"Silk\")}function y(){return u(\"Android\")&&!(x()||u(\"Firefox\")||u(\"FxiOS\")||(v()?0:u(\"Opera\"))||u(\"Silk\"))};var z=v()?!1:u(\"Trident\")||u(\"MSIE\");y();x();w();var A=!z&&!w(),D=function(a){if(/-[a-z]/.test(\"ved\"))return null;if(A&&a.dataset){if(y()&&!(\"ved\"in a.dataset))return null;a=a.dataset.ved;return void 0===a?null:a}return a.getAttribute(\"data-\"+\"ved\".replace(/([A-Z])/g,\"-$1\").toLowerCase())};var E=[],F=null;function G(a){a=a.target;var c=performance.now(),f=[],H=f.concat,d=E;if(!(d instanceof Array)){var m=\"undefined\"!=typeof Symbol&&Symbol.iterator&&d[Symbol.iterator];if(m)d=m.call(d);else if(\"number\"==typeof d.length)d={next:b(d)};else throw Error(\"a`\"+String(d));for(var B=[];!(m=d.next()).done;)B.push(m.value);d=B}E=H.call(f,d,[c]);if(a&&a instanceof HTMLElement)if(a===F){if(c=4<=E.length)c=5>(E[E.length-1]-E[E.length-4])/1E3;if(c){c=google.getEI(a);a.hasAttribute(\"data-ved\")?f=a?D(a)||\"\":\"\":f=(f=\na.closest(\"[data-ved]\"))?D(f)||\"\":\"\";f=f||\"\";if(a.hasAttribute(\"jsname\"))a=a.getAttribute(\"jsname\");else{var C;a=null==(C=a.closest(\"[jsname]\"))?void 0:C.getAttribute(\"jsname\")}google.log(\"rcm\",\"&ei=\"+c+\"&ved=\"+f+\"&jsname=\"+(a||\"\"))}}else F=a,E=[c]}window.document.addEventListener(\"DOMContentLoaded\",function(){document.body.addEventListener(\"click\",G)});}).call(this);</script></body></html>"
+				},
+				{
+					"name": "Incorrect Slug",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/api/:platform/:slug",
+							"host": ["{{HOST}}"],
+							"port": "{{PORT}}",
+							"path": ["api", ":platform", ":slug"],
+							"variable": [
+								{
+									"key": "platform",
+									"value": "ios"
+								},
+								{
+									"key": "slug",
+									"value": "ABCD1234"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "90"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "372"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-awfAYB3OsmK+1XtQxJVHylQlToU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 22:42:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"statusCode\": 404,\n    \"message\": \"Short link not found\"\n}"
+				}
+			]
+		}
+	]
+}
