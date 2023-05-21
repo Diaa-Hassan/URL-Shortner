@@ -11,7 +11,7 @@ const app = express();
 connectDB();
 
 app.use(limiter);
-app.use(morgan('logger ➡  :method :url :status'));
+app.use(morgan('logger ➡  :method :url :status \t :user-agent'));
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
