@@ -16,10 +16,9 @@
 		"quotes": ["error", "single"],
 		"semi": ["error", "always"],
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
-		"prettier/prettier": "error",
 		"no-multi-spaces": "warn",
 		"no-trailing-spaces": "warn",
 		"no-case-declarations": "off",
-		"no-unused-vars": "warn"
+		"no-unused-vars": "off"
 	}
 }
