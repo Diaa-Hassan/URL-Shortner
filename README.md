@@ -70,3 +70,19 @@ git clone https://github.com/Diaa-Hassan/URL-Shortner.git
 ```bash
 docker-compose up
 ```
+
+## Testing
+
+The project uses [Jest](https://jestjs.io/) as a testing framework and [Supertest](https://www.npmjs.com/package/supertest) to test the API endpoints.
+
+To run the tests, run the following command
+
+```bash
+npm test
+```
+
+and here is a screenshot of some of the test results
+
+<p align="center">
+  <img src="./docs/Screenshot from 2023-05-23 01-28-45.png" />
+</p>

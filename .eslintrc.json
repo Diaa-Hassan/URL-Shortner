@@ -2,15 +2,25 @@
 	"env": {
 		"browser": true,
 		"es2021": true,
-		"node": true
+		"node": true,
+		"jest": true
 	},
 	"extends": ["eslint:recommended", "prettier"],
-	"overrides": [],
+	"overrides": [
+		{
+			"files": ["**/*.test.js"],
+			"env": {
+				"jest/globals": true
+			},
+			"plugins": ["jest"],
+			"extends": ["plugin:jest/recommended"]
+		}
+	],
 	"parserOptions": {
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["prettier"],
+	"plugins": ["prettier", "jest"],
 	"rules": {
 		"linebreak-style": ["error", "unix"],
 		"quotes": ["error", "single"],
