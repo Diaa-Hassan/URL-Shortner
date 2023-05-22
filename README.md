@@ -2,12 +2,14 @@
 
 A URL shortener decreases the length of a URL for you. Large URLs can be complicated to remember or share with others. A shortened URL version can help you share your favorite link more easily.
 
+This project has been deployed on [cyclic.sh](https://cyclic.sh/) and you can check it out [here](https://kind-blue-haddock-hat.cyclic.app/shortlinks).
+
 ## Tech Stack
 
 In this project, I used the following technologies:
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=js,nodejs,express,mongodb,linux,git,vscode,postman" />
+  <img src="https://skillicons.dev/icons?i=js,nodejs,express,mongodb,docker,linux,git,vscode,postman" />
 </p>
 
 ## How it works
@@ -55,7 +57,7 @@ npm start
 
 ## How to use locally with Docker
 
-> first, you need to install Docker and Docker-Compose on your machine. You can follow the instructions on the official website (here)[https://docs.docker.com/get-docker/]
+> first, you need to install Docker and Docker-Compose on your machine. You can follow the instructions on the official website [here](https://docs.docker.com/get-docker/)
 
 1. Clone the repository
 
